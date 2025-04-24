@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/* adicionando fontes do Google Fonts para uso no projeto*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/* adicionando variáves através do :root*/
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Passion One", sans-serif;
+    --fonte3: "Sriracha", cursive;
+}
+/* configurando todos os elementos e seletores HTML sem margin e padding*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* configurações para o html e body*/
+html, body {
+    font-family: var(--fonte1);
+    min-height: 100vh; /* configurando a altura minima do site para 100% da view height, assim deixando que o site sempre ocupe toda a tela do usuário*/
+    background-color: darkgray;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center; /* para alinha todo o texto dentro dessa div para o centro da tela*/
+}
+
+header > h1 {
+    font-family: var(--fonte2);
+    font-size: 7.5vw; /* alterando o tamanho da fonte para 10vw(view width ou largura da tela). Isso significa que o tamanho da fonte se ajustará responsivamente, de acordo com a largura da tela do usuário, sendo sempre 10% dela*/
+    padding-top: 50px;
+    font-variant: small-caps; /* adicionando uma variante de texto, alterando para que o texto tenha aspecto que maiúsculo */
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+/* configurando os links em header e footer*/
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.8s; /* adicionando tempo para a transição do :hover*/
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+    color: grey;
+}
+
+/* configurando as sections do site */
+section {
+    font-family: var(--fonte3);
+    font-size: 3vw;
+    padding-top: 10vh; /* colocando o padding top e bottom para 10vh(ou 10% da altura da tela do usuário), ajustando o padding propocionalmente a altura da tela*/
+    padding-bottom: 10vh;
+    line-height: 2em; /* deixa a altura das linhas com valor dobrado conforme 2em*/
+    padding-left: 30px;
+}
+
+section > p {
+    padding-bottom: 2em; /* adicionando padding para dar espaçamento entre os parágrafos*/
+}
+
+/* configurando section com a class normal*/
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+/* configurando section com a class imagem */
+section.imagem {
+    background-color: rgb(85, 85, 85);
+    color: white;
+    box-shadow: inset 6px 8px 10px 0px rgba(0, 0, 0, 0.473); /* adicionando um box-shadow interno com inset para fazer sombra diretamente nas imagens */
+}
+
+/* configurando o p dentro da section com class imagem*/
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.479);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.445);
+}
+
+/* configurando a section que possui id img1*/
+section.imagem#img1 {
+    background: url('../imagens/background001.jpg') right center / cover no-repeat fixed;
+}
+
+/* configurando a section que possui id img2 */
+section.imagem#img2 {
+    background: url('../imagens/background002.jpg') right center / cover no-repeat fixed;
+}
+
+footer {
+    background-color: black;
+    text-align: center; 
+    color: white;
+    padding: 10px;
+}
